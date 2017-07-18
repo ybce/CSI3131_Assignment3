@@ -269,11 +269,11 @@ public class Paging {
 	
 	// translates a virtual memory address to it's components
 	// <virtual page number> <offset>
-	// This is used for logging into the tracefile
+	// This is used for logging into the trace file
 	public String translate2Virt(long memaddr) {
 		long pageNum;
 		long offset;
-		long mask = ~0; // initialise to all 1's
+		long mask = ~0; // initialize to all 1's
 		
 		mask <<= offsetBits; // Sets 0's in the offset part
 		offset = memaddr & (~mask); // one's complement creates mask for offset
